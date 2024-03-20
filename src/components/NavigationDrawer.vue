@@ -3,10 +3,10 @@
     <v-sheet
       class="d-flex flex-column justify-center align-center pa-4"
       color="grey-lighten-4"
-      height="25%"
+      height="25vh"
     >
-      <v-avatar size="115">
-        <v-icon icon="mdi-account-circle" size="115"></v-icon>
+      <v-avatar size="12.5vh">
+        <v-icon icon="mdi-account-circle" size="12.5vh"></v-icon>
       </v-avatar>
 
       <div class="text-center">
@@ -52,4 +52,6 @@ import { storeToRefs } from 'pinia'
 // DATA
 const store = commonStore()
 const { drawer } = storeToRefs(store)
+
+// COMPUTED
 </script>
