@@ -32,13 +32,11 @@ export default [
       {
         id: 'personnel_management',
         path: '/hr',
-        name: 'PersonnelManagement',
         title: '인사 관리'
       },
       {
         id: 'employee_registration',
         path: '/register',
-        name: 'EmployeeRegistration',
         title: '직원 등록'
       }
     ]
