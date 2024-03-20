@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer>
+  <v-navigation-drawer :width="200">
     <v-sheet
       class="d-flex flex-column justify-center align-center pa-4"
       color="grey-lighten-4"
