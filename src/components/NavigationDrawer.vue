@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer :width="200">
+  <v-navigation-drawer v-model="drawer" mobile-breakpoint="sm" :width="200">
     <v-sheet
       class="d-flex flex-column justify-center align-center pa-4"
       color="grey-lighten-4"
@@ -46,4 +46,10 @@
 
 <script setup>
 import menus from '@/menus.js'
+import { commonStore } from '@/stores/common.js'
+import { storeToRefs } from 'pinia'
+
+// DATA
+const store = commonStore()
+const { drawer } = storeToRefs(store)
 </script>
