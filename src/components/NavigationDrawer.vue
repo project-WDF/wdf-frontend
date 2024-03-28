@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" mobile-breakpoint="sm" :width="200">
+  <v-navigation-drawer v-model="drawer" mobile-breakpoint="md" :width="200">
     <v-sheet
       class="d-flex flex-column justify-center align-center pa-4"
       color="grey-lighten-4"

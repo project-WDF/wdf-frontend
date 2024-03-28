@@ -1,7 +1,7 @@
 export default [
   {
-    id: 'annual_report',
-    path: '/annual-report',
+    id: 'annual_application',
+    path: '/annual-application',
     title: '연차 신청'
   },
   {

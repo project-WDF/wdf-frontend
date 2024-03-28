@@ -1,17 +1,26 @@
 <template>
   <v-sheet class="d-flex align-center">
-    <v-label class="mr-3">{{ label }}</v-label>
+    <v-label v-if="label" class="mr-3">{{ label }}</v-label>
     <v-select
       :items="items"
-      :list-props="{ density: 'compact' }"
+      :list-props="{ density: 'compact', slim: true }"
       :model-value="select"
+      :disabled="disabled"
       hide-details
       density="compact"
       variant="outlined"
       item-value="value"
       item-title="title"
       @update:model-value="emits('update:select', $event)"
-    ></v-select>
+    >
+      <template v-slot:item="{ props, item }">
+        <v-list-item v-bind="props">
+          <template #title>
+            <div style="font-size: 0.875rem">{{ item.title }}</div>
+          </template>
+        </v-list-item>
+      </template>
+    </v-select>
   </v-sheet>
 </template>
 
@@ -23,15 +32,24 @@ defineProps({
   },
   label: {
     type: String,
-    required: true,
-    default: '라벨'
+    required: false
   },
   items: {
     type: Array,
     required: true,
     default: () => []
+  },
+  disabled: {
+    type: Boolean,
+    default: false
   }
 })
 
 const emits = defineEmits(['update:select'])
 </script>
+
+<style lang="scss">
+.v-field {
+  font-size: 0.875rem;
+}
+</style>

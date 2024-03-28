@@ -9,8 +9,8 @@ const router = createRouter({
       component: () => import('@/HomePage.vue'),
       children: [
         {
-          path: 'annual-report',
-          component: () => import('@/views/AnnualReportView.vue')
+          path: 'annual-application',
+          component: () => import('@/views/AnnualApplicationView.vue')
         },
         {
           path: 'annual-approval',

@@ -33,13 +33,16 @@ defineProps({
 
     thead {
       tr td {
-        background-color: turquoise;
-        border: 1px solid paleturquoise;
+        color: #ffffff;
+        padding: 4px 0 !important;
+        background-color: rgb(var(--v-theme-primary));
+        border: 1px solid rgb(var(--v-theme-primary-lighten-4));
       }
     }
     tbody {
       tr td {
-        border: 1px solid paleturquoise;
+        padding: 0 !important;
+        border: 1px solid rgb(var(--v-theme-primary-lighten-4));
       }
     }
   }
